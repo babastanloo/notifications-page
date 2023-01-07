@@ -1,0 +1,105 @@
+@use "variable";
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,700;0,800;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+  background-color: variable.$Very-light-grayish-blue;  
+  font-family: variable.$font-family;
+//   max-width: 1440px;
+//   margin: auto;
+  
+}
+
+.container{
+    width: 80%;
+    max-width: 900px;
+    height: 100%;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: variable.$White;
+
+   
+  }
+  .top{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin: 0.5%;
+    .title{       
+        display: flex;
+        flex: 1;
+        margin-bottom: 1rem;      
+        h1 {
+            font-size: variable.$font-size-2;
+            font-weight: 700;
+            margin-right: 0.5rem;
+        }
+        button{
+            background: variable.$Blue;
+            width: 3rem;
+            font-size: 1.2rem;
+            color: variable.$Very-light-grayish-blue;
+            border-radius: 20%;
+            border: none;
+        }  
+        @media screen and (max-width: 600px) {
+            h1 {
+                font-size: variable.$font-size-1;
+            }
+            button {
+                width: 2rem;
+            }
+        }
+    }
+         p {
+            flex: 1;
+             font-size: variable.$font-size-1;
+             font-weight: 400;
+             margin-left: 0.5rem;
+         }
+  
+}
+.user{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    padding: 1rem;
+    background-color: variable.$Light-grayish-blue-1;
+    border-radius: 0.8rem;
+    margin: 0.5%;
+    .pics{
+        margin: 0 1rem 1rem 0 ;
+        // width: 100%;
+        // flex: 0.5;
+        img{
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+    .profile{
+        flex: 3;
+        .content{
+            width: 100%;
+            .icon{
+                margin-left: 0.2rem;
+                width: 0.5rem;
+                height: 0.5rem;
+                background: variable.$Red;
+                border-radius: 50%;
+                border: none;
+            }
+        }
+        .time{
+            color: variable.$Grayish-blue;
+        }
+        @media only screen and (min-width: 600px){
+            font-size: 1.5rem;
+        }
+    }
+}
